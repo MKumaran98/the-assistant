@@ -14,6 +14,7 @@ class TodoList extends Component{
         list:[],
         title:'',
         dueDate:'',
+        fetched:false,
         description:'',
         priority:'1',
         modalOpen:false,
@@ -31,7 +32,8 @@ class TodoList extends Component{
         .then(response=>{
             if(this.state.list.length!==response.data.data.list.length){
                 this.setState({
-                    list:response.data.data.list
+                    list:response.data.data.list,
+                    fetched:true
                 })
             }
         });
@@ -183,7 +185,7 @@ class TodoList extends Component{
                         </Modal>);
         }
         let todoList=<Spinner/>
-        if(this.state.list.length>0){
+        if(this.state.fetched){
             todoList=(
                 <div className={classes.TodoList}>
                 <h1>Todo List</h1>

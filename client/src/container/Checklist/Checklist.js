@@ -14,7 +14,8 @@ class Checklist extends Component{
         newChecklist:{
             value:'',
             checked:false
-        }
+        },
+        fetched:false
     }
 
     componentDidMount(){
@@ -27,7 +28,8 @@ class Checklist extends Component{
         .then(response=>{
             if(this.state.checklist.length!==response.data.data.checklist.length){
                 this.setState({
-                    checklist:response.data.data.checklist
+                    checklist:response.data.data.checklist,
+                    fetched:false
                 })
             }
         });
@@ -128,7 +130,7 @@ class Checklist extends Component{
         }
 
         let CheckList=<Spinner/>
-        if(this.state.checklist.length>0){
+        if(this.state.fetched){
             CheckList=(
                 <div className={classes.CheckList}>
                 <h1>Check List</h1>

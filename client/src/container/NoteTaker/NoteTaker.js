@@ -13,6 +13,7 @@ class NoteTaker extends Component{
 
     state={
         modalOpen:false,
+        fetched:false,
         notes:[],
         newNote:'',
         characterLimit:false,
@@ -53,6 +54,7 @@ class NoteTaker extends Component{
         this.setState({
             notes:updatedNotes,
             newNote:'',
+
             modalOpen:false,
             takingNotes:false,
             editNote:false
@@ -112,7 +114,8 @@ class NoteTaker extends Component{
         .then(response=>{
             if(this.state.notes.length!==response.data.data.notes.length){
                 this.setState({
-                    notes:response.data.data.notes
+                    notes:response.data.data.notes,
+                    fetched:true
                 })
             }
         });
@@ -178,7 +181,7 @@ class NoteTaker extends Component{
         }
         let noteTaker=<Spinner/>
 
-        if(this.state.notes.length>0){
+        if(this.state.fetched){
             noteTaker=(<Aux>
                 <h1 style={{textAlign:"center"}}>Notes</h1>
                 <NewNote
