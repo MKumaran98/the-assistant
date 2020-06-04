@@ -1,6 +1,6 @@
 const Mongoose =require('mongoose');
 
-Mongoose.connect("mongodb://localhost/theassistant",{ useNewUrlParser: true ,useFindAndModify:true , useUnifiedTopology: true});
+Mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/theassistant",{ useNewUrlParser: true ,useFindAndModify:true , useUnifiedTopology: true});
 
 const db=Mongoose.connection;
 

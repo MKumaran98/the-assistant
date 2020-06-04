@@ -18,6 +18,11 @@ const passportJwt=require('./config/passport-jwt-strategy');
 //setting up router
 app.use('/',require('./Router/Router'));
 
+if(process.env.NODE_ENV==="production"){
+    app.use(Express.static('./client/build'))
+}
+
+
 app.listen(port,(err)=>{
     if(err){
         console.log("Error in starting up server")
