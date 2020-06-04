@@ -29,7 +29,7 @@ export const onReload=()=>{
 
 export const logInAsync=(data)=>{
     return dispatch=>{
-        axios.post('/api-session-creation',data)
+        axios.post('/api/api-session-creation',data)
         .then(response=>{
             // console.log(response);
             localStorage.setItem('token',response.data.data.token);

@@ -21,7 +21,7 @@ class Checklist extends Component{
                Authorization: "Bearer " + this.props.token
             }
         }
-        axios.get("/api-getchecklist/"+this.props.userId,config)
+        axios.get("/api/api-getchecklist/"+this.props.userId,config)
         .then(response=>{
             if(this.state.checklist.length!==response.data.data.checklist.length){
                 this.setState({
@@ -102,7 +102,7 @@ class Checklist extends Component{
             checklist:updatedChecklist
         }
 
-        axios.post("/api-checklist/"+this.props.userId,data,config)
+        axios.post("/api/api-checklist/"+this.props.userId,data,config)
         .then(response=>{
         })
         .catch(error=>alert("cannot add item now do check back later"));

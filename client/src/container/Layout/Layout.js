@@ -61,7 +61,7 @@ class Layout extends Component{
             name:this.state.signupName,
             password:this.state.signupPassword
         }
-        Axios.post('/api-signupuser',data)
+        Axios.post('/api/api-signupuser',data)
         .then(response=>{
             let res=response.data.data.userAdded;
             if(!res){

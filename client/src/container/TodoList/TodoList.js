@@ -27,7 +27,7 @@ class TodoList extends Component{
                Authorization: "Bearer " + this.props.token
             }
         }
-        axios.get("/api-gettodolist/"+this.props.userId,config)
+        axios.get("/api/api-gettodolist/"+this.props.userId,config)
         .then(response=>{
             if(this.state.list.length!==response.data.data.list.length){
                 this.setState({
@@ -129,7 +129,7 @@ class TodoList extends Component{
             list:updatedTodoList
         }
 
-        axios.post("/api-settodolist/"+this.props.userId,data,config)
+        axios.post("/api/api-settodolist/"+this.props.userId,data,config)
         .then(response=>{
         })
         .catch(error=>{

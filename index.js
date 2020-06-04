@@ -11,21 +11,22 @@ app.use(bodyParser.json());
 //connecting to db
 const db =require('./config/Mongoose')
 
+
 //setting up jwt
 const passportJwt=require('./config/passport-jwt-strategy');
 
 
 //setting up router
-app.use('/',require('./Router/Router'));
+app.use('/api',require('./Router/Router'));
 
-if(process.env.NODE_ENV==="production"){
+if(process.env.NODE_ENV ==='production'){
     app.use(Express.static('./client/build'))
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
-    });
+    // app.get('*', (req, res) => {
+    //     res.sendFile(path.join(__dirname, './client/build/index.html'))
+    // });
+    console.log("production serving")
 }
-
 
 app.listen(port,(err)=>{
     if(err){

@@ -107,7 +107,7 @@ class NoteTaker extends Component{
                Authorization: "Bearer " + this.props.token
             }
         }
-        axios.get("/api-getnotes/"+this.props.userId,config)
+        axios.get("/api/api-getnotes/"+this.props.userId,config)
         .then(response=>{
             if(this.state.notes.length!==response.data.data.notes.length){
                 this.setState({
@@ -128,10 +128,10 @@ class NoteTaker extends Component{
             notes:updatedNotes
         }
 
-        axios.post("/api-postnotes/"+this.props.userId,data,config)
+        axios.post("/api/api-postnotes/"+this.props.userId,data,config)
         .then(response=>{
         })
-        .catch(error=>alert("cannot add item now do check back later"));
+        .catch(error=>{console.log(error);alert("cannot add item now do check back later")});
     }    
 
     render(){
