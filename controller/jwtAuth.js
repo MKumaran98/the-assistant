@@ -8,7 +8,7 @@ module.exports.createSession =async function(req, res){
         if (!user || user.password != req.body.password){
             console.log(user);
             return res.json(422, {
-                message: "Invalid username or password"
+                message: "Invalid username or password",
             });
         }
 

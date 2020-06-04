@@ -32,7 +32,7 @@ const userSchema=new Mongoose.Schema({
                 type:String
             },
             dueDate:{
-                type:Date
+                type:String
             },
             description:{
                 type:String
