@@ -19,14 +19,9 @@ const passportJwt=require('./config/passport-jwt-strategy');
 //setting up router
 app.use('/api',require('./Router/Router'));
 
-if(process.env.NODE_ENV ==='production'){
-    app.use(Express.static('./client/build'))
+app.use(Express.static('./client/build'))
 
-    // app.get('*', (req, res) => {
-    //     res.sendFile(path.join(__dirname, './client/build/index.html'))
-    // });
-    console.log("production serving")
-}
+console.log("production serving")
 
 app.listen(port,(err)=>{
     if(err){

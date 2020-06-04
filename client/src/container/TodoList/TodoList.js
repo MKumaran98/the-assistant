@@ -7,7 +7,7 @@ import TaskList from './TaskList/TaskList';
 import SelectedTask from './SelectedTask/SelectedTask';
 import { connect } from 'react-redux';
 import axios from 'axios';
-
+import Spinner from '../../UI/Spinner/Spinner';
 
 class TodoList extends Component{
     state={
@@ -182,9 +182,10 @@ class TodoList extends Component{
                         }
                         </Modal>);
         }
-
-        return(
-            <div className={classes.TodoList}>
+        let todoList=<Spinner/>
+        if(this.state.list.length>0){
+            todoList=(
+                <div className={classes.TodoList}>
                 <h1>Todo List</h1>
                 {showModal}
                 {taskList}
@@ -194,6 +195,11 @@ class TodoList extends Component{
                     </Button>
                 </div>
             </div>
+            )
+        }
+
+        return(
+            todoList
         );
     }
 }

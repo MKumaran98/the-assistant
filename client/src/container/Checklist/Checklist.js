@@ -5,6 +5,8 @@ import classes from './Checklist.css';
 import Button from '../../UI/Button/Button';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import Spinner from '../../UI/Spinner/Spinner';
+
 
 class Checklist extends Component{
     state={
@@ -124,8 +126,11 @@ class Checklist extends Component{
                 );
             })
         }
-        return(
-            <div className={classes.CheckList}>
+
+        let CheckList=<Spinner/>
+        if(this.state.checklist.length>0){
+            CheckList=(
+                <div className={classes.CheckList}>
                 <h1>Check List</h1>
                 {checklist}
                 <ChecklistItems
@@ -144,6 +149,11 @@ class Checklist extends Component{
                     </Button>
                 </div>
             </div>
+            );
+        }
+
+        return(
+            CheckList
         );
     }
 }

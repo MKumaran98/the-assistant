@@ -7,6 +7,7 @@ import DisplayNotes from './DisplayNotes/DisplayNotes';
 import Button from '../../UI/Button/Button';
 import axios from 'axios'; 
 import {connect} from 'react-redux';
+import Spinner from '../../UI/Spinner/Spinner'
 
 class NoteTaker extends Component{
 
@@ -175,15 +176,20 @@ class NoteTaker extends Component{
                 </DisplayNotes>)
             })
         }
-        return(
-            <Aux>
+        let noteTaker=<Spinner/>
+
+        if(this.state.notes.length>0){
+            noteTaker=(<Aux>
                 <h1 style={{textAlign:"center"}}>Notes</h1>
                 <NewNote
                 addNotes={this.newNoteClickedHandler}
                 />
                 {existingNotes}
                 {takeNewNote}
-            </Aux>
+            </Aux>);
+        }
+        return(
+            noteTaker
         );
     }
 }
