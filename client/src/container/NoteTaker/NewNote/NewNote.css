@@ -1,0 +1,40 @@
+.NewNote{
+    margin:10px;
+    margin-top: 10px;
+    height: 200px;
+    background-color: white;
+    border-radius: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 350px;
+}
+
+.NewNote:hover{
+    border: 2px solid blue;
+}
+
+.plus {
+    display:inline-block;
+    width:100px;
+    height:100px;    
+    background:
+      linear-gradient(blue,blue),
+      linear-gradient(blue,blue),
+      white;
+    background-position:center;
+    background-size: 50% 5px,5px 50%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat:no-repeat;
+}
+
+
+
+
+@media (min-width : 500px){
+    .NewNote{
+        width: 350px;
+        position: relative;
+        top: 40px;
+    }
+}

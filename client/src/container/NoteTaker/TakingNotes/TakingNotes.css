@@ -1,0 +1,11 @@
+.textAreaContainer{
+    width: 70%;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.TakingNotesContainer{
+    display: flex;
+    align-items: center;
+}
+

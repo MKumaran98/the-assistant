@@ -1,0 +1,65 @@
+[33mcommit 76e277ae9da399890c7543b78bf1a82c8f5e5dc6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Fri May 15 11:18:47 2020 +0530
+
+    trying out a fix
+
+[33mcommit 89c1f1703bd769f94ba8152806b065c31ca87d85[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Thu May 14 16:22:26 2020 +0530
+
+    Added signup page
+
+[33mcommit c8277c5719d07d8be8ba52955e7cb4bc63432b12[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Thu May 14 14:41:56 2020 +0530
+
+    added home screen
+
+[33mcommit 9ea0f10d29f14cef6e93693104ab94c968e04d6b[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Thu May 14 14:04:24 2020 +0530
+
+    added todo list
+
+[33mcommit 4e155a072d96ceba447fb0e0f0435b5a128e7509[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Thu May 14 00:37:23 2020 +0530
+
+    Check list added
+
+[33mcommit 02af40e4186a0378bdbba5f5206111e420152bdf[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Wed May 13 21:18:42 2020 +0530
+
+    note taker done
+
+[33mcommit d8ddc0a384e50afc74dd29e23660115173970378[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Wed May 13 17:27:39 2020 +0530
+
+    removed feature checklist
+
+[33mcommit a294af7cc068ebae3e154b9e16881dcd226e59bb[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Sun May 10 20:29:48 2020 +0530
+
+    form validation problem(needs to be fixed)
+
+[33mcommit fb999c2142e7494955da28810e668e4a5afbe716[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Sun May 10 01:42:56 2020 +0530
+
+    add index page
+
+[33mcommit 732cf79fc20a14fef83d30f7c731d85a4ae76273[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Sat May 9 23:34:11 2020 +0530
+
+    add header (Rough)
+
+[33mcommit 9e9d37d36773173b39bf15c6036b4db34eded75f[m
+Author: Muthu Kumaran <61352185+KumaranSahi@users.noreply.github.com>
+Date:   Sat May 9 23:16:33 2020 +0530
+
+    add side bar

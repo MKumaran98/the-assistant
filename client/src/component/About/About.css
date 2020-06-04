@@ -1,0 +1,15 @@
+.mastHead{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    min-height: 400px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 2px gray;
+    padding: 20px;
+}
+
+.linkedin{
+    width: 50px;
+    margin-left: 45%;
+}

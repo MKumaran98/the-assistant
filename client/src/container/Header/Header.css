@@ -1,0 +1,30 @@
+.HeaderContainer{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(103, 171, 235, 0.7);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.LogoContainer{
+    width: 75px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+.Hamburger{
+    align-self: center;
+    margin-right: 5px;
+    box-sizing: border-box;
+    height: 50%;
+    padding: 3px;
+    transition: ease-in 0.1s;
+}
+
+.Hamburger:hover{
+    border:2px solid white
+}

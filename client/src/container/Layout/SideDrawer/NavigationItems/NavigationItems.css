@@ -1,0 +1,17 @@
+.SidebarItems{
+    margin-top: 65px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navItem{
+    color: white;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+p:hover{
+    border-bottom:2px solid white;
+}

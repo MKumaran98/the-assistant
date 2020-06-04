@@ -1,0 +1,27 @@
+.Btn{
+    width: 50%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    background-color: white;
+    outline: none;
+    border: none;
+    color: #67abeb;
+    border-radius: 5px;
+}
+
+.Btn:hover{
+    color: white;
+    background-color:#67abeb;
+}
+
+.Btn.Danger{
+    color:orangered;
+}
+
+.Danger:hover{
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,46 @@
+.TaskList{
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    min-height: 150px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 2px gray;
+    text-align: left;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.TaskList:hover{
+    transform: scale(1.05);
+}
+
+.low{
+    background-color: white;
+}
+
+.lowMedium{
+    background-color: #c6d0f7;
+}
+
+.medium{
+    background-color: #91a6fa;
+}
+
+.mediumHigh{
+    background-color: #748ffc;
+    color: white;
+}
+
+.high{
+    background-color: #0033ff;
+    color: white;
+}
+
+@media (max-width:420px){
+    .TaskList{
+        margin: 0px;
+    }
+}

@@ -1,0 +1,42 @@
+a{
+    text-decoration: none;
+}
+
+.Tiles{
+    width: 90%;
+    height: 200px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.Tiles:hover{
+    transform: scale(1.05);
+}
+
+.NotesTile{
+    background-color: darkblue;
+}
+
+.ListTile{
+    background-color: cadetblue;
+}
+
+.TodoTile{
+    background-color: blue;
+}
+
+.Tiles p{
+    color: white;
+    font-size: 2rem;
+}
+
+@media(min-width:420px){
+    .Tiles{
+        width: 27%;
+        height: 250px;
+    }
+}
