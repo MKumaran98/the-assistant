@@ -180,14 +180,14 @@ class NoteTaker extends Component{
         let noteTaker=<Spinner/>
 
         if(this.state.notes.length>=0){
-            noteTaker=(<Aux>
+            noteTaker=(<div style={{"textAlign":"center"}}>
                 <h1 style={{textAlign:"center"}}>Notes</h1>
                 <NewNote
                 addNotes={this.newNoteClickedHandler}
                 />
                 {existingNotes}
                 {takeNewNote}
-            </Aux>);
+            </div>);
         }
         return(
             noteTaker

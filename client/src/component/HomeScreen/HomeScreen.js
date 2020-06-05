@@ -5,7 +5,7 @@ import classes from './HomeScreen.css'
 const homeScreen=(props)=>{
 
     return(
-        <div>
+        <div style={{"textAlign":"center"}}>
             <NavLink to="/notes">
                 <div className={[classes.Tiles,classes.NotesTile].join(" ")}>
                     <p>Notes</p>

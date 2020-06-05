@@ -2,7 +2,7 @@ import React,{ Component} from 'react';
 import classes from './Signin.css';
 import Button from '../../UI/Button/Button'
 import Textbar from '../../UI/Textbar/Textbar'
-import {withRouter} from 'react-router-dom'
+import {withRouter,Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import * as authActions from '../../store/Actions/auth'
 
@@ -64,6 +64,9 @@ class Signin extends Component{
                             
                         <Button>Log In</Button>
                         </form>
+                        <Link to="/sign-up">
+                            <p>First Time?Sign up!</p>
+                        </Link>
                 </div>
             
         );
