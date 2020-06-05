@@ -47,6 +47,12 @@ const reducer=(state=initialState,action)=>{
                 authRedirectPath:action.path
             }
         
+        case actionTypes.RESETERROR:
+            return{
+                ...state,
+                error:null
+            }
+
         default:
             return state
     }

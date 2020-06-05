@@ -61,6 +61,11 @@ export const authFail=(error)=>{
     }
 }
 
+export const resetError=()=>{
+    return{
+        type:actionTypes.RESETERROR
+    }
+}
 
 export const checkAuthTimeout=(expirationTime)=>{
     return dispatch=>{

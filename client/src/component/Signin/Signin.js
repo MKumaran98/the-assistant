@@ -38,10 +38,17 @@ class Signin extends Component{
 
     
     render(){
+        let errorDispatch=null;
+        if(this.props.error){
+            errorDispatch= alert("Invalid email/password");
+            this.props.onErrorDispatch();
+        }
+
+
         return(    
                 <div className={classes.SigninContainer}>
                     <h1>Log In</h1>
-                        {this.props.error?alert("Invalid email/password"):null}
+                        {errorDispatch}
                         <form onSubmit={this.loginHandler} style={{width:"90%"}}>
                             <div style={{width:"80%"}}>
                                 <Textbar 
@@ -85,7 +92,8 @@ const mapStateToProps=state=>{
 const mapDispatchToProps=dispatch=>{
     return{
         onAuthStart:()=>dispatch(authActions.authStart()),
-        onLogin:(data)=>dispatch(authActions.logInAsync(data))
+        onLogin:(data)=>dispatch(authActions.logInAsync(data)),
+        onErrorDispatch:()=>dispatch(authActions.resetError())
     }
 }
 
