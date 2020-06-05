@@ -69,7 +69,6 @@ const NavigationItems=(props)=>{
             </div>
         );
     }
-    console.log(props.location.pathname)
     return(
         <Aux>
             {sidebarItems}
